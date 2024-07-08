@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <title>Search-bar practical</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <h1>Search Bar</h1>
+            <input type="search" id="inputbox" placeholder="Search here...">
+        </div>
+
+        <div class="head">
+            <h3>Name</h3>
+            <h3>Location</h3>
+            <h3>Profession</h3>
+        </div>
+
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Profession</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Tausif</td>
+                    <td>Mumbai</td>
+                    <td>Frontend Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Qureshi</td>
+                    <td>Dadar</td>
+                    <td>Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Iqbal</td>
+                    <td>Gujarat</td>
+                    <td>Full Stack Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Tq</td>
+                    <td>Hyderabad</td>
+                    <td>Software Engineer</td>
+                </tr>
+
+                <tr>
+                    <td>Friend</td>
+                    <td>Pune</td>
+                    <td>Python Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Boy</td>
+                    <td>Bangalore</td>
+                    <td>Java Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Girl</td>
+                    <td>Suriyapet</td>
+                    <td>C++ Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Shaziya</td>
+                    <td>Hyderabad</td>
+                    <td>Data Analyst</td>
+                </tr>
+
+                <tr>
+                    <td>Ashana</td>
+                    <td>Charminar</td>
+                    <td>Ruby Developer</td>
+                </tr>
+
+                <tr>
+                    <td>Ali</td>
+                    <td>Nizamabad</td>
+                    <td>PHP Developer</td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+
+
+    </div>
+    <script>
+        document.getElementById("inputbox").addEventListener("keyup", filterTable);
+
+        function filterTable() {
+
+            let inputBox = document.getElementById("inputbox").value.toUpperCase();
+            console.log(inputBox);
+            let myTable = document.getElementById("myTable");
+            console.log(myTable);
+
+            let tr = myTable.getElementsByTagName("tr");
+            console.log(tr);
+
+            for(let i=0; i< tr.length; i++){
+              let td = tr[i].getElementsByTagName("td")[0];
+              console.log(td);
+
+              if (td) {
+                let textValue = td.textContent || td.innerHTML;
+                // console.log(texValue);
+                if (textValue.toUpperCase().indexOf(inputBox) > -1){
+                    tr[i].style.display = ''; //row show hogi yaha se;
+            }else{
+                tr[i].style.display = 'none';
+            }
+            }
+            
+            }
+           
+        }
+    </script>
+</body>
+</html>
