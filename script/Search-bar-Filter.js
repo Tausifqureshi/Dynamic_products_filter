@@ -57,6 +57,36 @@ inputTag.addEventListener('input', filterTable); //function call filterTable cal
 
 
 
+// Refactor code Array.form me chnage kar ke 
+// function filterTable() {
+//     // console.log("clicekd");
+//     const input = document.getElementById('inp').value.toUpperCase()
+//     // console.log(input);
+//     const table = document.getElementById("myTable");
+//     // console.log(table);
+//     const tr = Array.from(table.getElementsByTagName('tr'));
+//     // console.log(tr);
+//     tr.forEach(element => {
+//         // console.log(element);
+//         const td = element.getElementsByTagName('td')[0];
+//         // console.log(td);
+//         if (td) {
+//             const textVlaue = td.textContent || td.innerText;
+//         console.log(textVlaue);
+//         if (textVlaue.toUpperCase().indexOf(input) > -1) {
+//             element.style.display = ""
+//         } else {
+//             element.style.display = "none";
+//         }
+//         }
+       
+//     });
+// }
+
+//    const inputTag = document.getElementById('inp');
+// // console.log(inputTag)
+// inputTag.addEventListener('input', filterTable);
+
 
 
 
