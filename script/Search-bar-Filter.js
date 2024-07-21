@@ -57,7 +57,8 @@ inputTag.addEventListener('input', filterTable); //function call filterTable cal
 
 
 
-// Refactor code Array.form me chnage kar ke 
+// ========================================== Refactor =================================================//
+// Refactor code Array.form me chnage kar ke:
 // function filterTable() {
 //     // console.log("clicekd");
 //     const input = document.getElementById('inp').value.toUpperCase()
@@ -82,7 +83,6 @@ inputTag.addEventListener('input', filterTable); //function call filterTable cal
        
 //     });
 // }
-
 //    const inputTag = document.getElementById('inp');
 // // console.log(inputTag)
 // inputTag.addEventListener('input', filterTable);
